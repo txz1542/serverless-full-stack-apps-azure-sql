@@ -1,5 +1,7 @@
 name: Deploy Azure SQL Database schema
 
+# dummy comment to trigger push action
+
 on:
   push:
     branches:
@@ -21,5 +23,5 @@ jobs:
         with:
           server-name: bus-server128253.database.windows.net
           connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-          # uses dacpac to deploy database schema
+          # uses dacpac to deploy database schema 
           dacpac-package: './Database/dacpac/bus-db.dacpac'
